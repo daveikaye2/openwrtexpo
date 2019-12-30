@@ -9,7 +9,7 @@ Have OpenWrt with OpenSync running on the target device.
 Currently all the following steps have to be run when you make changes to the source code.
 
     git clone https://git.openwrt.org/openwrt/openwrt.git --branch v18.06.5 --single-branch repo
-    docker build -t <whateveryouwant>
+    docker build -t <whateveryouwant> .
     mkdir bin
     docker run -it --rm --mount type=bind,source="$(pwd)"/bin,target=/home/docker/openwrt/bin <yourbuiltimagename>
 
